@@ -1,102 +1,84 @@
 """
-Arithmetic Operators
+Assignment Operators:
 
-+ , - , * , / , %(Remainder), //(floor division), ** (Exponent)
-
-Comparison Operators:
-1. == (Equal to)
-2. != (Not Equal to)
-3. > (Greater than)
-4. < (Less than)
-5. >= (Greater than or equal to)
-6. <= (Less than or equal to)
-
----> It always returns Boolean value (True, False)
-"""
-
-# print(15 == 15)              # True
-# print(15 != 15)              # False     
-# print( 15 > 12)              # True
-# print( 15 < 12)              # False
-# print( 15 >= 15)             # True
-# print( 15 <= 15)             # True
+= (Assignment)
++= (Add and assign) # a += 10 ----> a = a + 10
+-= (Subtract and assign) # a -= 10 ----> a = a - 10
+*= (Multiply and assign) # a *= 10 ----> a = a * 10
+/= (Divide and assign) # a /= 10 ----> a = a / 10
+%= (Modulus and assign) # a %= 10 ----> a = a % 10
+//= (Floor division and assign) # a //= 10 ----> a = a // 10
+**= (Exponent and assign) # a **= 10 ----> a = a ** 10
 
 """
-1) if
-2) if..else
-3) if..elif..else
-4) if ladder (Nested if)
 
--------------------------
+# a = 10
+# print(a)            # 10
 
-Syntax:
+# a += 10             # a = a + 10 ---> a = 10 + 10 = 20
+# print(a)            # 20
 
-1 ) if condition:
-         statements
-         statements
+# a -= 5              # a = a - 5 ---> a = 20 - 5 = 15
+# print(a)            # 15
 
-2) if condition:
-        statements
-    else:
-        statements
-
-3) if condition1:
-        statements
-    elif condition2:
-        statements
-    else:
-        statements
+# a **= 2            # a = a ** 2 ---> a = 15 ** 2 = 225
+# print(a)           # 225
 
 """
-# num1 = int(input("Enter number 1: "))
-# num2 = int(input("Enter number 2: "))
-# if num1 > num2:
-#     print(num1,"is greater than",num2)
-# else:
-#     print(num1,"is less than",num2)
+Bitwise Operators:
 
+1. & (AND)
+2. | (OR)
+3. ^ (XOR)
+4. >> (Right shift)
+5. << (Left shift)
+---------------------------------
+
+Decimal to Binary Conversion:
+
+43 = 101011
+
+2 | 43
+2 | 21 ---> 1
+2 | 10 ---> 1
+2 | 5 ---> 0
+2 | 2 ---> 1
+2 | 1 ---> 0
+
+----> Botom up approach
+
+Binary to Decimal Conversion:
+
+43 - 1   0   1   0   1    1
+
+     1 | 2 | 4 | 8 | 16 | 32 | 64 | 128
+
+1 + 4 + 16 + 32 = 43
+
+45 - 101101
+
+--------------------------------
+
+1. &(AND)
+
+Truth Table:
+----------------
+a | b | a & b
+----------------
+0 | 0 | 0
+0 | 1 | 0
+1 | 0 | 0
+1 | 1 | 1
+
+43  -  1   0   1   0   1    1
+&      &   &   &   &   &    &
+45  -  1   0   1   1   0    1
+------------------------------
+       1   0   1   0   0    1  (41)
 """
-1. Check Whether the given number is even or odd.
-2. Check Whether the given number is positive or negative.
-3. Check Whether the given number is divisible by 3.
-4. A shop will give discount of 10% if the cost of purchased quantity is more than 1000.
-    # Ask user for quantity
-    # Assume each unit's cost is 100.
-    # Judge and print total cost for user. 
-"""
-# Task 4
-
-# quantity = int(input("Enter quantity: "))
-# cost = quantity * 100
-
-# if cost > 1000:
-#     print("You will get 10% discount")
-#     total = cost - (cost * 0.1)
-#     print("Total cost: ",total)
-
-# else:
-#     print("Total cost: ",cost)
-
-
-"""
-5. A company decided to give bonus of 5% to employee if his/her year of service is more than 5 years. Ask user for their salary and year of service and print the net bonus amount.
-
-6. A school has following rules for grading system:
-    # a. Below 25 - F
-    # b. 25 to 45 - E
-    # c. 45 to 50 - D
-    # d. 50 to 60 - C
-    # e. 60 to 80 - B
-    # f. Above 80 - A
-    # Ask user to enter marks and print the corresponding grade.
-
-7. A student will not be allowed to sit in exam if his/her attendance is less than 75%.
-    # Take following input from user:
-    # Number of classes held
-    # Number of classes attended.
-    # And print:
-    # percentage of class attended
-    # Is student is allowed to sit in exam or not.
-
-8. Take a three numbers from the user and find maximum.
-"""
+print(43&45)
+print(16&32)
+print(89&45)
+print(78&45)
+print(78&89)
+print(56&16)
